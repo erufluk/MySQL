@@ -1,0 +1,35 @@
+create database segundoexercicio;
+
+use segundoexercicio;
+
+create table ecommerce (
+id bigint auto_increment,
+marca varchar (20) not null,
+tipo varchar (20) not null,
+preço int (6) not null,
+tamanho varchar (15),
+primary key (id)
+);
+
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values ("Nike", "Camisa", 120,"M");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values ("Nike", "Blusa", 700,"G");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values ("Louis Vitton", "Bolsa", 5000," ");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values ("Louis Vitton", "Bolsa", 6000," ");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values ("Channel", "Calça", 800,"P");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+values("Adidas", "Camisa", 200,"G");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values("Puma", "BLusa", 600,"G");
+insert into tb_ecommerce (marca, tipo, preço, tamanho)
+	values("Prada", "Camisa", 500,"G");
+ 
+select id, marca from tb_ecommerce where preço >500;
+
+select id, marca from tb_ecommerce where preço <500;
+
+update tb_ecommerce set preço= 500 where id=3;

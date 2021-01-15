@@ -1,0 +1,29 @@
+create database primeiroExercico;
+
+use primeiroExercico;
+
+create table tb_funcionarios (
+id bigint auto_increment,
+nome varchar (30) not null,
+cargo varchar (20) not null,
+salario int (6) not null,
+departamento varchar (15),
+primary key (id)
+);
+
+
+insert into tb_funcionarios (nome, cargo, salario, departamento)
+	values ("Luiz", "Analista Jr", 3000,"Finanças");
+insert into tb_funcionarios (nome, cargo, salario, departamento)
+	values ("Marta", "Gerente", 7000,"Marketing");
+insert into tb_funcionarios (nome, cargo, salario, departamento)
+	values ("Camila", "Analista", 5000,"RH");
+insert into tb_funcionarios (nome, cargo, salario, departamento)
+	values ("Murilo", "Coordenadora", 6000,"Vendas");
+insert into tb_funcionarios (nome, cargo, salario, departamento)
+	values ("Jaqueline", "Gerente", 7000,"Corporativo");
+
+select nome, salario from tb_funcionarios where salario >2000.0;
+select nome, salario from tb_funcionarios where salario <2000.0;
+
+update tb_funcionarios set salario = 7500 where id=5;

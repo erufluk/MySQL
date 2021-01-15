@@ -1,0 +1,35 @@
+create database terceiroexercicio;
+
+use terceiroexercicio;
+
+create table escola(
+id bigint auto_increment,
+Nome varchar (20) not null,
+Serie varchar (2) not null,
+Genero char (6) not null,
+notamedia int(2),
+primary key (id)
+);
+
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values ("Drussyla", "1E", F,"8");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values ("Jucyely", "1C", F,"5");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values ("Lorenne", "2A", F,"4 ");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values ("Juma", "2D", F,"9 ");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values ("Fabiola", "1A", F,"2");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+values("Adenizia", "1B", F,"5");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values("Rahimova", "2C", F,"7");
+insert into tb_ecommerce (Nome, Serie, Genero, notamedia)
+	values("Brenda", "2C", F,"6");
+ 
+select id, marca from tb_ecommerce where nota>7;
+
+select id, marca from tb_ecommerce where nota<7;
+
+update tb_ecommerce set notamedia= 8 where id=2;
